@@ -13,7 +13,7 @@ env:
 
 jobs:
   deploy:
-    environment: dev
+    environment: devv
     name: "Deploy bundle"
     runs-on: ubuntu-latest
 
@@ -23,10 +23,10 @@ jobs:
       - uses: databricks/setup-cli@main
 
       - run: |
-          databricks bundle validate -t "dev" --var="env=dev"
+          databricks bundle validate -t "devv" --var="env=devv"
 
       - run: |
-          databricks bundle deploy -t "dev" --var="env=dev"
+          databricks bundle deploy -t "devv" --var="env=devv"
          
  
          
